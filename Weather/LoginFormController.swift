@@ -3,7 +3,7 @@
 //  Weather
 //
 //  Created by Victor Garitskyu on 07.12.2020.
-////
+//
 
 import UIKit
 
@@ -13,20 +13,50 @@ class LoginFormController: UIViewController {
     @IBOutlet weak var titletext: UILabel!
     @IBOutlet weak var scrol: UIScrollView!
       
+    
     @IBOutlet weak var passwordinput: UITextField!
     @IBOutlet weak var logininput: UITextField!
+    @IBAction func Loginbuttonn(_ sender: Any) {
+       
+    }
+          
+    //
     
-    
-  
-    
-    
-    @IBAction func loginButton(_ sender: Any) {
-          // Логика проверки полей
-        if logininput.text == "admin"  && passwordinput.text == "admin" {
-              print("OK")
-          }
-      }
-      
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+            // Проверяем данные
+            let checkResult = checkUserData()
+            
+            // Если данные не верны, покажем ошибку
+            if !checkResult {
+                showLoginError()
+            }
+            
+            // Вернем результат
+            return checkResult
+        }
+        
+        func checkUserData() -> Bool {
+            guard let login = logininput.text,
+                let password = passwordinput.text else { return false }
+            
+            if login == "admins" && password == "123456" {
+                return true
+            } else {
+                return false
+            }
+        }
+        
+        func showLoginError() {
+            // Создаем контроллер
+            let alter = UIAlertController(title: "Ошибка", message: "Введены не верные данные пользователя", preferredStyle: .alert)
+            // Создаем кнопку для UIAlertController
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            // Добавляем кнопку на UIAlertController
+            alter.addAction(action)
+            // Показываем UIAlertController
+            present(alter, animated: true, completion: nil)
+        }
+
       override func viewDidLoad() {
           super.viewDidLoad()
           let hideKeyboardGesture = UITapGestureRecognizer(target: self,
