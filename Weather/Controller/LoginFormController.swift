@@ -20,7 +20,7 @@ class LoginFormController: UIViewController {
        
     }
           
-    //
+    
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
             // Проверяем данные
@@ -39,7 +39,7 @@ class LoginFormController: UIViewController {
             guard let login = logininput.text,
                 let password = passwordinput.text else { return false }
             
-            if login == "admins 1312" && password == "123456" {
+            if login == "" && password == "" {
                 return true
             } else {
                 return false
