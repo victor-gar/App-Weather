@@ -62,7 +62,7 @@ class LoginFormController: UIViewController {
           let hideKeyboardGesture = UITapGestureRecognizer(target: self,
                                                            action: #selector(hideKeyboard))
           scrol?.addGestureRecognizer(hideKeyboardGesture)
-
+   
       }
       
       override func viewWillAppear(_ animated: Bool) {
@@ -75,11 +75,10 @@ class LoginFormController: UIViewController {
                                                  selector: #selector(self.keyboardWillBeHidden(notification:)),
                                                  name: UIResponder.keyboardWillHideNotification,
                                                  object: nil)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
       }
       
-      override func viewDidAppear(_ animated: Bool) {
-          super.viewDidAppear(animated)
-      }
+      
       
       override func viewWillDisappear(_ animated: Bool) {
           super.viewWillDisappear(animated)
@@ -89,7 +88,8 @@ class LoginFormController: UIViewController {
           NotificationCenter.default.removeObserver(self,
                                                     name: UIResponder.keyboardWillHideNotification,
                                                     object: nil)
-
+        self.navigationController?.setNavigationBarHidden(false, animated: animated); // <<
+        super.viewWillDisappear(animated) 
       }
       
       override func viewDidDisappear(_ animated: Bool) {

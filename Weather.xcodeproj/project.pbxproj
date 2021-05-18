@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1616F9AF25F7F85700D0D482 /* AllCitiesTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1616F9AA25F7EBDC00D0D482 /* AllCitiesTableController.swift */; };
+		1617417B25C8F004002F6DB9 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1617417A25C8F004002F6DB9 /* GradientView.swift */; };
+		16265AC725D46867005E63C1 /* DayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16265AC625D46867005E63C1 /* DayPicker.swift */; };
 		16539B2825A6D95A0046C7C6 /* AllCitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16539B2725A6D95A0046C7C6 /* AllCitiesController.swift */; };
 		16539B3725A6E98C0046C7C6 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16539B3625A6E98C0046C7C6 /* CityCell.swift */; };
 		16539B3F25A6EA5C0046C7C6 /* MyCitiesTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16539B3E25A6EA5C0046C7C6 /* MyCitiesTableController.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1616F9AA25F7EBDC00D0D482 /* AllCitiesTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCitiesTableController.swift; sourceTree = "<group>"; };
+		1617417A25C8F004002F6DB9 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		16265AC625D46867005E63C1 /* DayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPicker.swift; sourceTree = "<group>"; };
 		16539B2725A6D95A0046C7C6 /* AllCitiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCitiesController.swift; sourceTree = "<group>"; };
 		16539B3625A6E98C0046C7C6 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		16539B3E25A6EA5C0046C7C6 /* MyCitiesTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCitiesTableController.swift; sourceTree = "<group>"; };
@@ -86,11 +92,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1617416E25C8EF96002F6DB9 /* Gradient */ = {
+			isa = PBXGroup;
+			children = (
+				1617417A25C8F004002F6DB9 /* GradientView.swift */,
+			);
+			path = Gradient;
+			sourceTree = "<group>";
+		};
 		16539B1E25A6D8B30046C7C6 /* AllCities */ = {
 			isa = PBXGroup;
 			children = (
 				16539B3625A6E98C0046C7C6 /* CityCell.swift */,
-				16539B2725A6D95A0046C7C6 /* AllCitiesController.swift */,
 			);
 			path = AllCities;
 			sourceTree = "<group>";
@@ -98,8 +111,8 @@
 		16539B3B25A6E9AB0046C7C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				16F579BD257D650100B498E7 /* LaunchScreen.storyboard */,
 				16F579B8257D650000B498E7 /* Main.storyboard */,
+				16F579BD257D650100B498E7 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -116,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				16539B3E25A6EA5C0046C7C6 /* MyCitiesTableController.swift */,
+				16539B2725A6D95A0046C7C6 /* AllCitiesController.swift */,
 			);
 			path = MyCities;
 			sourceTree = "<group>";
@@ -152,6 +166,7 @@
 		16F579B1257D650000B498E7 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				1617416E25C8EF96002F6DB9 /* Gradient */,
 				16A0487825AE283C00F1469C /* Weather */,
 				16539B3D25A6EA0B0046C7C6 /* MyCities */,
 				16539B3C25A6E9DC0046C7C6 /* Controller */,
@@ -161,6 +176,7 @@
 				16F579B4257D650000B498E7 /* SceneDelegate.swift */,
 				16F579BB257D650100B498E7 /* Assets.xcassets */,
 				16F579C0257D650100B498E7 /* Info.plist */,
+				16265AC625D46867005E63C1 /* DayPicker.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -177,6 +193,7 @@
 		16F579D3257D650100B498E7 /* WeatherUITests */ = {
 			isa = PBXGroup;
 			children = (
+				1616F9AA25F7EBDC00D0D482 /* AllCitiesTableController.swift */,
 				16F579D4257D650100B498E7 /* WeatherUITests.swift */,
 				16F579D6257D650100B498E7 /* Info.plist */,
 			);
@@ -315,12 +332,14 @@
 			files = (
 				16F579E9257D666D00B498E7 /* LoginFormController.swift in Sources */,
 				16F579B3257D650000B498E7 /* AppDelegate.swift in Sources */,
+				16265AC725D46867005E63C1 /* DayPicker.swift in Sources */,
 				16539B3725A6E98C0046C7C6 /* CityCell.swift in Sources */,
 				16539B3F25A6EA5C0046C7C6 /* MyCitiesTableController.swift in Sources */,
 				16A0488725AE2A5700F1469C /* WeatherCell.swift in Sources */,
 				16A0487A25AE287100F1469C /* WeatherViewController.swift in Sources */,
 				16539B2825A6D95A0046C7C6 /* AllCitiesController.swift in Sources */,
 				16F579B5257D650000B498E7 /* SceneDelegate.swift in Sources */,
+				1617417B25C8F004002F6DB9 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16F579D5257D650100B498E7 /* WeatherUITests.swift in Sources */,
+				1616F9AF25F7F85700D0D482 /* AllCitiesTableController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
